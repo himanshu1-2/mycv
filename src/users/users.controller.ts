@@ -10,7 +10,7 @@ import { User } from './user.entity';
 
 
 @Controller('auth')
-//@Serialize(UserDto)
+@Serialize(UserDto)
 export class UsersController {
 constructor(private usersService:UsersService,
     private authService:AuthService

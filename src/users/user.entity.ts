@@ -36,4 +36,7 @@ import { Report } from 'src/reports/report.entity';
     logRemove() {
       console.log('Removed User with id', this.id);
     }
+
+    @Column({default: true})
+    admin:boolean
   }
