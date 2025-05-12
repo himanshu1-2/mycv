@@ -16,7 +16,7 @@ export class ReportsService {
        return this.repo.save(report)
    }
    async changeApproval(id:string,approve:boolean){
-      const report = await this.repo.findOneBy({id:parseInt(id)})
+      const report = await this.repo.findOne({id:parseInt(id)})
       if(!report){
          throw new NotFoundException('Report not Found')
       }

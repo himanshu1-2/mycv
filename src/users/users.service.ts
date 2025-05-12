@@ -12,10 +12,10 @@ export class UsersService {
     findOne(id:number){
         if(!id)
             return null
-        return this.repo.findOneBy({id});
+        return this.repo.findOne({id});
     }
     find(email:string){
-        return this.repo.findBy({email})
+        return this.repo.find({email})
     }
     async update(id:number,attars:Partial<User>){
         let user = await this.findOne(id)
